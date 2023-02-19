@@ -1,0 +1,133 @@
+body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background: url('C:\Users\Faith\Desktop\project-6\src\images/recipe.jpeg');
+      font-family: century gothic;
+      background-repeat: repeat;
+      background-position: cover;
+}
+.developer div {
+      padding: 5px;
+      margin-top: 0;
+}
+.developer p img {
+      margin-right: 20px;
+      padding: 0;
+      transform: translateY(7px);
+}
+.recipe-content {
+      margin: 15px;
+      padding: 10px;
+      background-color: #fdfdfd;
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      box-shadow: 0 0 5px 5px #dbcbdb;
+}
+.recipe-content button {
+      padding: 10px;
+      margin: 5px;
+      width: 100px;
+      font-size: 1em;
+      border: none;
+      background-color: rgb(231, 19, 54);
+      color: #fff;
+
+}
+.recipe-align {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+}
+.recipe-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #dbcbdb;
+      width: 100%;
+      color: chocolate;
+      padding: 0;
+      flex-wrap: wrap;
+      margin: 0;
+      position: fixed;
+      border-top: 20px solid chocolate;
+}
+.recipe-links .links {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px;
+      margin-right: 10%;
+      margin-top: 25px;
+}
+.recipe-links h1 {
+      margin: 30px;
+      margin-left: 10%;
+      margin-top: 25px;
+}
+.home-links {
+      color: chocolate;
+      padding: 0;
+      margin: 10px;
+      font-weight: bold;
+      text-decoration: none;
+}
+.recipe-image-content {
+      margin-top: 5pc;
+      padding: 30px;
+      padding-right: 10%;
+      padding-left: 10%;
+      font-size: 1.5em;
+      display: flex;
+      justify-content: space-around;
+}
+.recipe-image-content div, .recipe-image-content form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+}
+.recipe-image-content form {
+      padding: 10px;
+      margin: 20px;
+}
+.recipe-image-content form input {
+      background-color: chocolate;
+      outline: none;
+      padding: 7px;
+      margin: 0;
+      width: 100%;
+      border: none;
+      font-size: 1em;
+      border-radius: 20px;
+}
+.recipe-image-content form input::placeholder {
+      color: #000;
+}
+.developer div > h1 {
+      margin-top: 8pc;
+}
+.center-developer-content {
+      margin-left: 10%;
+      margin-right: 10%;
+}
+.align-recipes {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      margin-right: 10%;
+      margin-left: 10%;
+}
+.recipe-image-content button {
+      padding: 7px;
+       margin-top: 15px;
+       width: 25%;
+       font-size: .8em;
+       border: none;
+       background-color: #000;
+       color: #fff;
+       border-radius: 20px;
+}
