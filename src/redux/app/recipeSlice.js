@@ -1,31 +1,31 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
+//5be40ace6ac346c0b88fc5aa6543f3a0
 const initialState = {
   recipes: [],
   status: "idle",
-  recipeName: "",
   error: null,
 };
-const client = axios.create({
-  baseURL: `https://www.themealdb.com/api/json/v1/1/search.php?s=${initialState.recipeName}`,
-});
+
 export const fetchRecipes = createAsyncThunk(
   "recipes/fetchRecipes",
-  async () => {
+  async (recipeName) => {
+    const client = axios.create({
+      baseURL: `https://api.spoonacular.com/recipes/complexSearch?query=${recipeName}&instructionsRequired=true&fillIngredients=true&addRecipeInformation=true&number=20&apiKey=5be40ace6ac346c0b88fc5aa6543f3a0`,
+    });
     const response = await client.get();
-    return response.data.meals;
+    if (recipeName === "") {
+      return [];
+    } else {
+      console.log(response.data.results);
+      return response.data.results;
+    }
   }
 );
 const recipeSlice = createSlice({
   name: "recipes",
   initialState,
-  reducers: {
-    addRecipeName: (state, action) => {
-      const recipeName = action.payload;
-      state.recipeName = recipeName;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchRecipes.pending, (state, action) => {
@@ -41,7 +41,5 @@ const recipeSlice = createSlice({
       });
   },
 });
-
-export const { addRecipeName } = recipeSlice.actions;
 
 export default recipeSlice;

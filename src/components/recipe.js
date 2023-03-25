@@ -6,12 +6,12 @@ const Recipe = ({ recipe }) => {
   return (
     <div className="recipe-content">
       <img
-        scr={`${recipe.strCategoryThumb}/preview`}
+        scr={recipe.image / recipe.imageType}
         width="100%"
         height="200px"
         alt=""
       />
-      <h2>{recipe.strCategory}</h2>
+      <h2>{recipe.title}</h2>
       <button
         type="button"
         onClick={() => {

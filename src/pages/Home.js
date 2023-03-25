@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Recipe from "../components/recipe";
-import { addRecipeName, fetchRecipes } from "../redux/app/recipeSlice";
+import { fetchRecipes } from "../redux/app/recipeSlice";
 
 const Home = () => {
   const [recipe, setRecipe] = useState("");
   const dispatch = useDispatch();
   const state = useSelector((state) => state.recipes);
   const recipes = state.recipes;
+  useEffect(() => {
+    dispatch(fetchRecipes(recipe));
+  }, [recipe, dispatch]);
   return (
     <div className="recipe-align">
       <div className="recipe-image-content">
@@ -28,15 +31,7 @@ const Home = () => {
             onChange={(event) => setRecipe(event.target.value)}
             className="form-input-content"
           />
-          <button
-            type="button"
-            onClick={() => {
-              dispatch(addRecipeName(recipe));
-              dispatch(fetchRecipes());
-            }}
-          >
-            Search
-          </button>
+          <button type="button">Search</button>
         </form>
       </div>
       <div className="align-recipes">
