@@ -1,4 +1,4 @@
-import React, { createRef } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Recipe = ({ recipe }) => {
