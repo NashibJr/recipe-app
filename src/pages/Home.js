@@ -31,7 +31,6 @@ const Home = () => {
             onChange={(event) => setRecipe(event.target.value)}
             className="form-input-content"
           />
-          <button type="button">Search</button>
         </form>
       </div>
       <div className="align-recipes">
