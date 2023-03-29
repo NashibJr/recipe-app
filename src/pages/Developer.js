@@ -33,16 +33,11 @@ const Developer = () => {
             wanted to do either Computer Science or Software Engineering which
             was unfortunately not the case.
           </p>
-          <p>
+          <p style={{ marginTop: "7vh" }}>
             He started his programming journey by following the road map given
             to him by his uncle starting with HTML, CSS and JavaScript where he
             started learning a JavaScript Framework Reactjs which he became an
             expert.
-          </p>
-          <p>
-            Currently, he is pursuing a Barchelor's degree in Computer Science
-            from Metrpolitan International University but he is considering
-            quiting
           </p>
         </div>
       </div>

@@ -7,14 +7,18 @@ body {
       background-repeat: repeat;
       background-position: cover;
 }
+.developer {
+      background-color: #fdfdfd;
+}
 .developer div {
       padding: 5px;
       margin-top: 0;
 }
 .developer p img {
       margin-right: 20px;
-      padding: 0;
-      transform: translateY(7px);
+      padding: 5px;
+      transform: translateY(15px);
+      z-index: -1;
 }
 .recipe-content {
       margin: 15px;
@@ -161,4 +165,17 @@ body {
       width: 100px;
       border-radius: 20px;
       box-shadow: 0 0 15px 0 #000;
+}
+.about-content {
+      transform: translate(22vh, 25vh);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 70%;
+      flex-wrap: wrap;
+      border: none;
+      border-radius: 20px;
+      background-color: #fdfdfd;
+      box-shadow: 0 0 20px 0 #000;
 }
