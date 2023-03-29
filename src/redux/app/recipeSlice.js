@@ -17,7 +17,6 @@ export const fetchRecipes = createAsyncThunk(
     if (recipeName === "") {
       return [];
     } else {
-      console.log(response.data.results);
       return response.data.results;
     }
   }

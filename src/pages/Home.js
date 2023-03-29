@@ -7,7 +7,7 @@ const Home = () => {
   const [recipe, setRecipe] = useState("");
   const dispatch = useDispatch();
   const state = useSelector((state) => state.recipes);
-  const recipes = state.recipes;
+  const recipes = state?.recipes;
   useEffect(() => {
     dispatch(fetchRecipes(recipe));
   }, [recipe, dispatch]);
@@ -35,7 +35,7 @@ const Home = () => {
         </form>
       </div>
       <div className="align-recipes">
-        {recipes.map((recipe) => {
+        {recipes?.map((recipe) => {
           return <Recipe recipe={recipe} key={recipe.id} />;
         })}
         <p>{state.error}</p>
