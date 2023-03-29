@@ -37,7 +37,7 @@ const Home = () => {
         {recipes?.map((recipe) => {
           return <Recipe recipe={recipe} key={recipe.id} />;
         })}
-        <p>{state.error}</p>
+        <p>{state?.error}</p>
       </div>
     </div>
   );

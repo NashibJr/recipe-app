@@ -12,19 +12,19 @@ const SingleRecipe = () => {
       <div className="singlerecipes">
         <div>
           <h2>Recipe</h2>
-          <img src={recipe.image} alt="" width="300px" height="200px" />
-          <h3>{recipe.title}</h3>
+          <img src={recipe?.image} alt="" width="300px" height="200px" />
+          <h3>{recipe?.title}</h3>
           <div>
             <strong>
               <em>Description</em>
             </strong>
-            <p>{recipe.summary}</p>
+            <p>{recipe?.summary}</p>
           </div>
         </div>
         <div>
           <h2>Ingredients</h2>
           <div className="ingredients">
-            {recipe.extendedIngredients.map((ingredient) => {
+            {recipe?.extendedIngredients.map((ingredient) => {
               return (
                 <div key={ingredient.id}>
                   <img
@@ -43,7 +43,7 @@ const SingleRecipe = () => {
         </div>
         <div>
           <h2>Instructions</h2>
-          {recipe.analyzedInstructions.map((item) =>
+          {recipe?.analyzedInstructions?.map((item) =>
             item.steps.map((instruction) => (
               <li key={instruction.id}>{instruction.step}</li>
             ))
