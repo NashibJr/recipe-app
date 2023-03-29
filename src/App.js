@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Developer from "./pages/Developer";
+import SingleRecipe from "./pages/singlerecipe";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/developer" element={<Developer />} />
+        <Route path="/singlerecipe/:id" element={<SingleRecipe />} />
       </Routes>
     </Router>
   );
